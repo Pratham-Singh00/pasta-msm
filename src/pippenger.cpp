@@ -2,7 +2,8 @@
 // Licensed under the Apache License, Version 2.0, see LICENSE for details.
 // SPDX-License-Identifier: Apache-2.0
 
-#include <msm/pippenger.hpp>
+// #include <msm/pippenger.hpp>
+#include "../sppark/msm/pippenger.hpp"
 #include <ec/jacobian_t.hpp>
 #include <ec/xyzz_t.hpp>
 #include <ff/pasta.hpp>

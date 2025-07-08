@@ -14,7 +14,8 @@ typedef xyzz_t<vesta_t> bucket_t;
 typedef bucket_t::affine_t affine_t;
 typedef pallas_t scalar_t;
 
-#include <msm/pippenger.cuh>
+// #include <msm/pippenger.cuh>
+#include "../sppark/msm/pippenger.cuh"
 
 #ifndef __CUDA_ARCH__
 extern "C"
