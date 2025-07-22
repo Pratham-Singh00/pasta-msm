@@ -4,11 +4,10 @@
 
 // #include <msm/pippenger.hpp>
 #include "../sppark/msm/pippenger.hpp"
+
 #include <ec/jacobian_t.hpp>
 #include <ec/xyzz_t.hpp>
 #include <ff/pasta.hpp>
-
-
 static thread_pool_t da_pool;
 
 extern "C"
