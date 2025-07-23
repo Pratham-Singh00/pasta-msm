@@ -93,6 +93,9 @@ fn main() {
         nvcc.define("__MSM_SORT_DONT_IMPLEMENT__", None)
             .file("cuda/vesta.cu")
             .compile("vesta_msm_cuda");
+        nvcc.clone()
+            .file("cuda/pippenger_glv.cu")
+            .compile("pippenger_glv_cuda");
 
         println!("cargo:rerun-if-changed=cuda");
         println!("cargo:rerun-if-env-changed=CXXFLAGS");
