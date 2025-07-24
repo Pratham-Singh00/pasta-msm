@@ -5,8 +5,8 @@
 // #include <msm/pippenger.hpp>
 #include "../sppark/msm/pippenger.hpp"
 #include <ec/affine_t.hpp>
-#include "sppark/msm/pippenger_common.hpp"
-#include "sppark/msm/pippenger_old.hpp"
+#include "../sppark/msm/pippenger_common.hpp"
+#include "../sppark/msm/pippenger_old.hpp"
 
 #include <ec/jacobian_t.hpp>
 #include <ec/xyzz_t.hpp>
@@ -22,7 +22,7 @@ void mult_pippenger_pallas(
     bool                               mont
 ) {
     pasta_msm::mult_pippenger_glv< xyzz_t<pallas_t>, vesta_t >(
-        ret, pts, npts, scalars, mont, &da_pool
+        ret, pts, npts, scalars, true , nullptr
     );
 }
 
@@ -34,7 +34,7 @@ void mult_pippenger_vesta(
     const pallas_t                   scalars[],
     bool                              mont
 ) {
-    pasta_msm::mult_pippenger< xyzz_t<vesta_t>, pallas_t >(
-        ret, pts, npts, scalars, mont, &da_pool
+    mult_pippenger< xyzz_t<vesta_t>, pallas_t >(
+        ret, pts, npts, scalars, true, nullptr
     );
 }
