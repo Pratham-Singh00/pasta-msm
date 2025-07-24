@@ -8,8 +8,6 @@ typedef xyzz_t<pallas_t> bucket_t;
 typedef bucket_t::affine_t affine_t;
 typedef vesta_t scalar_t;
 
-#include "../sppark/msm/glv_split.cuh"
-#include "../sppark/msm/glv_endo.cuh"
 #include "../sppark/msm/pippenger.cuh"
 
 #ifndef __CUDA_ARCH__

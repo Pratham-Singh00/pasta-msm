@@ -18,23 +18,35 @@ void mult_pippenger_pallas(
     jacobian_t<pallas_t>               &ret,
     const xyzz_t<pallas_t>::affine_t   pts[],
     size_t                             npts,
-    const vesta_t                     scalars[],
+    const vesta_t                      scalars[],
     bool                               mont
 ) {
-    pasta_msm::mult_pippenger_glv< xyzz_t<pallas_t>, vesta_t >(
-        ret, pts, npts, scalars, true , nullptr
+    using Bucket = xyzz_t<pallas_t>;
+    using Point  = jacobian_t<pallas_t>;
+    using Scalar = vesta_t;
+
+    pasta_msm::mult_pippenger_glv<
+      Bucket,
+      Point,
+      Scalar
+    >(
+      ret,
+      pts,
+      npts,
+      scalars,
+      mont,
+      &da_pool
     );
 }
 
-extern "C"
-void mult_pippenger_vesta(
-    jacobian_t<vesta_t>               &ret,
-    const xyzz_t<vesta_t>::affine_t   pts[],
-    size_t                            npts,
-    const pallas_t                   scalars[],
-    bool                              mont
-) {
-    mult_pippenger< xyzz_t<vesta_t>, pallas_t >(
-        ret, pts, npts, scalars, true, nullptr
-    );
-}
+
+// extern "C"
+// void mult_pippenger_vesta(
+//     jacobian_t<vesta_t>               &ret,
+//     const xyzz_t<vesta_t>::affine_t   pts[],
+//     size_t                            npts,
+//     const pallas_t                    scalars[],
+//     bool                              mont
+// ) {
+   
+// }

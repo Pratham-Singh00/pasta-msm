@@ -70,8 +70,8 @@ fn main() {
     if nvcc.is_ok() {
         let mut nvcc = cc::Build::new();
         nvcc.cuda(true);
-        nvcc.flag("-arch=sm_80");
-        nvcc.flag("-gencode").flag("arch=compute_70,code=sm_70");
+        nvcc.flag("-arch=sm_86");
+        nvcc.flag("-gencode").flag("arch=compute_86,code=sm_86");
         nvcc.flag("-t0");
         #[cfg(not(target_env = "msvc"))]
         nvcc.flag("-Xcompiler").flag("-Wno-unused-function");
@@ -93,9 +93,6 @@ fn main() {
         nvcc.define("__MSM_SORT_DONT_IMPLEMENT__", None)
             .file("cuda/vesta.cu")
             .compile("vesta_msm_cuda");
-        nvcc.clone()
-            .file("cuda/pippenger_glv.cu")
-            .compile("pippenger_glv_cuda");
 
         println!("cargo:rerun-if-changed=cuda");
         println!("cargo:rerun-if-env-changed=CXXFLAGS");
