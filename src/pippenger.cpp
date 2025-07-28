@@ -4,7 +4,7 @@
 
 // #include <msm/pippenger.hpp>
 #include "../sppark/msm/pippenger.hpp"
-#include <ec/affine_t.hpp>
+#include "../sppark/ec/affine_t.hpp"
 #include "../sppark/msm/pippenger_common.hpp"
 #include "../sppark/msm/pippenger_old.hpp"
 

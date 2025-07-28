@@ -16,6 +16,8 @@ typedef vesta_t scalar_t;
 
 //#include <msm/pippenger.cuh>
 #include "../sppark/msm/pippenger.cuh"
+#include "../sppark/ec/affine_t.hpp"
+
 #ifndef __CUDA_ARCH__
 extern "C"
 RustError cuda_pippenger_pallas(point_t *out, const affine_t points[], size_t npoints,
