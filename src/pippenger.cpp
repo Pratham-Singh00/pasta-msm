@@ -40,13 +40,13 @@ void mult_pippenger_pallas(
 }
 
 
-// extern "C"
-// void mult_pippenger_vesta(
-//     jacobian_t<vesta_t>               &ret,
-//     const xyzz_t<vesta_t>::affine_t   pts[],
-//     size_t                            npts,
-//     const pallas_t                    scalars[],
-//     bool                              mont
-// ) {
+/* extern "C"
+void mult_pippenger_vesta(
+    jacobian_t<vesta_t>               &ret,
+    const xyzz_t<vesta_t>::affine_t   pts[],
+    size_t                            npts,
+    const pallas_t                    scalars[],
+    bool                              mont
+) {
    
-// }
+} */
