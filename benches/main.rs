@@ -24,7 +24,7 @@ include!("../src/tests.rs");
 
 fn criterion_benchmark(c: &mut Criterion) {
     let bench_npow: usize = std::env::var("BENCH_NPOW")
-        .unwrap_or("17".to_string())
+        .unwrap_or("16".to_string())
         .parse()
         .unwrap();
     let npoints: usize = 1 << bench_npow;
