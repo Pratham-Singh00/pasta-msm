@@ -54,7 +54,7 @@ fn criterion_benchmark(c: &mut Criterion) {
     if unsafe { cuda_available() } {
         unsafe { pasta_msm::CUDA_OFF = false };
 
-        const EXTRA: usize = 0;
+        const EXTRA: usize = 6;
         let bench_npow = bench_npow + EXTRA;
         let npoints: usize = 1 << bench_npow;
 
