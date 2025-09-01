@@ -5,8 +5,6 @@
 // #include <msm/pippenger.hpp>
 #include "../sppark/msm/pippenger.hpp"
 #include <ec/affine_t.hpp>
-#include "../sppark/msm/pippenger_common.hpp"
-#include "../sppark/msm/pippenger_old.hpp"
 
 #include <ec/jacobian_t.hpp>
 #include <ec/xyzz_t.hpp>
@@ -25,7 +23,7 @@ void mult_pippenger_pallas(
     using Point  = jacobian_t<pallas_t>;
     using Scalar = vesta_t;
 
-    pasta_msm::mult_pippenger_glv<
+    pasta_msm::mult_pippenger<
       Bucket,
       Point,
       Scalar
