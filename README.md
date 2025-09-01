@@ -71,6 +71,7 @@ Two modifications are required to run the benchmarks: one to a cached dependency
    2. Change the MSM_NTHREADS value from 256 to 128 on line 240
       
    On **batch_addition.cuh**
+   
    4. Replace batch_addition.cuh with the following:
    ```cuh
    // Copyright Supranational LLC
