@@ -308,7 +308,7 @@ Two modifications are required to run the benchmarks: one to a cached dependency
    ```
 4. **Point-specific changes**
 
-   When running 2^16 points on both the Jetson and 3090, make sure to change **nwins** to 11 and **wbits** to 13
+   When running 2^16 points on both the Jetson and 3090, make sure to change **nwins** to 11 and **wbits** to 13 (located in pippenger.cuh line 542-543)
 ---
  
 ## Step 3: Run the Benchmark for Time
