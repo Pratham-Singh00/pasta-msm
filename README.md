@@ -63,7 +63,9 @@ Two modifications are required to run the benchmarks: one to a cached dependency
 	rayon = "1.5"
 	```
 3. **Change numbers for 3090 or Jetson**
+   
    If the code is running on the 3090, leave code as is.
+   
    If the Code is running on the Jetson, do the following.
    
    On **pippenger.cuh**
