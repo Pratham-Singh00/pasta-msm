@@ -72,7 +72,7 @@ Two modifications are required to run the benchmarks: one to a cached dependency
       
    On **batch_addition.cuh**
    
-   4. Replace batch_addition.cuh with the following:
+   3. Replace batch_addition.cuh with the following:
    ```cuh
    // Copyright Supranational LLC
    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
