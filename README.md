@@ -65,11 +65,13 @@ Two modifications are required to run the benchmarks: one to a cached dependency
 3. **Change numbers for 3090 or Jetson**
    If the code is running on the 3090, leave code as is.
    If the Code is running on the Jetson, do the following.
+   
    On **pippenger.cuh**
    1. Change the ACCUMULATE_NTHREADS value from 384 to 512 (change 384 to 512 value on line 232 and 235)
    2. Change the MSM_NTHREADS value from 256 to 128 on line 240
+      
    On **batch_addition.cuh**
-   3. Replace batch_addition.cuh with the following:
+   4. Replace batch_addition.cuh with the following:
    ```cuh
    // Copyright Supranational LLC
    // Licensed under the Apache License, Version 2.0, see LICENSE for details.
