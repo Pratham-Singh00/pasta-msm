@@ -298,8 +298,9 @@ Two modifications are required to run the benchmarks: one to a cached dependency
    template<class bucket_t>
    bucket_t sum_up(const std::vector<bucket_t>& inp)
    {   return sum_up(&inp[0], inp.size());   }
-   #endif  
-```
+   #endif
+     
+   ```
 ---
  
 ## Step 3: Run the Benchmark for Time
